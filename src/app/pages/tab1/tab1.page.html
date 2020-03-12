@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Kuman news
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  
+   <app-noticias [noticias]="noticias"></app-noticias>
+
+   <ion-infinite-scroll threshold="20" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content color="white" loadingSpinner="circular"
+                                     loadingText="Cargando noticias...">
+
+        </ion-infinite-scroll-content>
+   </ion-infinite-scroll>  
+
+</ion-content>
